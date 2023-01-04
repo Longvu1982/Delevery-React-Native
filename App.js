@@ -7,14 +7,20 @@ import { TailwindProvider } from "tailwindcss-react-native";
 const Stack = createNativeStackNavigator();
 
 export default function App() {
-	return (
-		<NavigationContainer>
-			<TailwindProvider>
-				<Stack.Navigator>
-					<Stack.Screen name="Home" component={HomeScreen} options = {{headerShown: false}}/>
-					{/* <><Text>ABC</Text></> */}
-				</Stack.Navigator>
-			</TailwindProvider>
-		</NavigationContainer>
-	);
+  return (
+    <NavigationContainer>
+      <TailwindProvider>
+        <Stack.Navigator
+          screenOptions={{ contentStyle: { backgroundColor: "rgb(243, 244, 246)" } }}
+        >
+          <Stack.Screen
+            name="Home"
+            component={HomeScreen}
+            options={{ headerShown: false }}
+          />
+          {/* <><Text>ABC</Text></> */}
+        </Stack.Navigator>
+      </TailwindProvider>
+    </NavigationContainer>
+  );
 }
